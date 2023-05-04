@@ -1,9 +1,4 @@
-# Define a hash of usernames and passwords
-users = {
-  "Andreas" => "12345",
-  "Andre" => "67890",
-  "Bob" => "abcd"
-}
+require_relative "users"
 
 # Define the maximum number of attempts allowed
 MAX_ATTEMPTS = 5
@@ -22,7 +17,7 @@ while failed_attempts < MAX_ATTEMPTS do
   password = gets.chomp
 
   # Compare the entered password to the stored password for the entered username
-  if password == users[username]
+  if password == USERS[username]
     puts "Thank you, you are logged in."
     break
   else
@@ -35,5 +30,4 @@ end
 if failed_attempts == MAX_ATTEMPTS
   puts "Sorry, you are blocked."
   exit
-
 end
