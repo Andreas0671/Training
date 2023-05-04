@@ -35,4 +35,6 @@ end
 if failed_attempts == MAX_ATTEMPTS
   puts "Sorry, you are blocked."
   exit
+  #test
+
 end
